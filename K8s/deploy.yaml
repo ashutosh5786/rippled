@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ripple-deployment
+  labels:
+    app: ripple
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ripple
+  template:
+    metadata:
+      labels:
+        app: ripple
+    spec:
+      containers:
+      - name: ripple
+        image: ashutosh5786/ripple
+        ports:
+        - containerPort: 51235
+        - containerPort: 5005
+        - containerPort: 6006
