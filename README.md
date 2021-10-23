@@ -4,7 +4,7 @@ contains the required file to run the rippled in docker and K8s with steps of in
 #### Prerequisite K8s cluster with Deployment access
 
 First I have build the dockerfile for the required software which can be found in the repo as *Dockerfile*.
-which required the bash script for adding the repolist and install the rippled on the container, file can be found with name *startup.sh*
+Which required the bash script for adding the repolist and install the rippled on the container, file can be found with name *startup.sh*
 As per requirement an update script was requested for rippled, but there was already a cron job for the same I have attached the screen shot for verification.
 
 After that I have written the *deploy.yaml* file for K8s deployment and the deployment is done. <br /> <br /> 
